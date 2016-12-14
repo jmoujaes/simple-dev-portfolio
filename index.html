@@ -28,14 +28,14 @@
             <img id="profilepic" class="card-img-top img-fluid rounded mx-auto d-block" src="#" alt="Profile Picture">
             <div class="card-block">
               <h3 id="profilename">My Name</h3>
-              <p class="">A description from the config.js file that says a little something about myself. If left empty, this should be blank</p>
+              <p id="bio" class="card-text"></p>
             </div>
           </div>
 
           <!-- Social -->
-          <div class="card card-outline-warning">
+          <div class="card card-outline-danger">
             <div class="card-block">
-              <h2 class="card-title text-muted">Look Here</h2>
+              <h2 class="card-title text-muted text-xs-center">Look Here</h2>
             </div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">
@@ -56,7 +56,7 @@
           <!-- This Site -->
           <div class="card card-outline-success">
             <div class="card-block">
-              <p class="text">This site template is on <a id="projectsite" target="_blank" href="#">GitHub.</a> It is easily configurable and extendable by adding more cards for projects, education, etc.</p> 
+              <p class="card-text">This site template is on <a id="projectsite" target="_blank" href="#">GitHub</a> for free. It is easily configurable via a config file. It can be extended as well to fit your portfolio. Simply add more cards that showcase or link previous projects, education, etc.</p> 
             </div>
           </div>
 
@@ -75,7 +75,8 @@
     document.querySelector("body").style.backgroundColor = config.backgroundcolor;
     document.getElementById("profilepic").src = config.profilepic;
     document.getElementById("profilename").innerHTML = config.name;
-    document.getElementById("projectsite").href = config.projecsite;
+    document.getElementById("bio").innerHTML = config.bio;
+    document.getElementById("projectsite").href = config.projectsite;
     
     // social
     document.getElementById("github").href = config.github;
