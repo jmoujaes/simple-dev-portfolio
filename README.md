@@ -2,6 +2,6 @@ This project is meant to be a super simple site that developers and others can u
 
 [Demo](http://www.jasonmoujaes.com)
 
-Take a look at config.js to see which variables are configurable.
+Take a look at js/config.js to see which variables are configurable.
 
 Extend the site to fit your needs by adding more cards. Bootstrap documentation on cards: https://v4-alpha.getbootstrap.com/components/card/
