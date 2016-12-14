@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+
+    <!-- bootstrap boilerplate -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- link stylesheets -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+
+    <!-- pull in config values -->
+    <script src="config.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+        <div class="card-columns">
+
+          <!-- Bio -->
+          <div class="card card-outline-primary">
+            <div class="card-block">
+              <h2 class="card-title text-xs-center text-muted">About Me</h2>
+            </div>
+            <img id="profilepic" class="card-img-top img-fluid rounded mx-auto d-block" src="#" alt="Profile Picture">
+            <div class="card-block">
+              <h3 id="profilename">My Name</h3>
+              <p class="">A description from the config.js file that says a little something about myself. If left empty, this should be blank</p>
+            </div>
+          </div>
+
+          <!-- Social -->
+          <div class="card card-outline-warning">
+            <div class="card-block">
+              <h2 class="card-title text-muted">Look Here</h2>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <a id="github" target="_blank"><i class="fa fa-github"></i>  Github</a>
+              </li>
+              <li class="list-group-item">
+                <a id="linkedin" target="_blank"><i class="fa fa-linkedin"></i>  LinkedIn</a>
+              </li>
+              <li class="list-group-item">
+                <a id="twitter" target="_blank"><i class="fa fa-twitter"></i>  Twitter</a>
+              </li>
+              <li class="list-group-item">
+                <a id="facebook" target="_blank"><i class="fa fa-facebook"></i>  Facebook</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- This Site -->
+          <div class="card card-outline-success">
+            <div class="card-block">
+              <p class="text">This site template is on <a id="projectsite" target="_blank" href="#">GitHub.</a> It is easily configurable and extendable by adding more cards for projects, education, etc.</p> 
+            </div>
+          </div>
+
+
+        </div>
+    </div>
+
+
+  <script type="text/javascript">
+  function init() {
+    // initialize the page with data from the config file
+    // config is defined in file config.js
+
+    console.log("config values: " + JSON.stringify(config));
+    document.title = config.name;
+    document.querySelector("body").style.backgroundColor = config.backgroundcolor;
+    document.getElementById("profilepic").src = config.profilepic;
+    document.getElementById("profilename").innerHTML = config.name;
+    document.getElementById("projectsite").href = config.projecsite;
+    
+    // social
+    document.getElementById("github").href = config.github;
+    document.getElementById("linkedin").href = config.linkedin;
+    document.getElementById("twitter").href = config.twitter;
+    document.getElementById("facebook").href = config.facebook;
+  };
+
+  init();
+  </script>
+  </body>
+
+</html>
