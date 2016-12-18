@@ -25,7 +25,7 @@
             <div class="card-block">
               <h2 class="card-title text-xs-center text-muted">About Me</h2>
             </div>
-            <img id="profilepic" class="card-img-top img-fluid rounded mx-auto d-block" src="#" alt="Profile Picture">
+            <img id="profilepic" class="card-img-top img-fluid rounded mx-auto d-block" src="#">
             <div class="card-block">
               <h3 id="profilename">My Name</h3>
               <p id="bio" class="card-text"></p>
@@ -38,20 +38,20 @@
               <h2 class="card-title text-muted text-xs-center">Look Here</h2>
             </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">
-                <a id="github" target="_blank"><i class="fa fa-github"></i>  Github</a>
+              <li id="github" class="list-group-item">
+                <a id="github-link" target="_blank"><i class="fa fa-github"></i>  Github</a>
               </li>
-              <li class="list-group-item">
-                <a id="linkedin" target="_blank"><i class="fa fa-linkedin"></i>  LinkedIn</a>
+              <li id="linkedin" class="list-group-item">
+                <a id="linkedin-link" target="_blank"><i class="fa fa-linkedin"></i>  LinkedIn</a>
               </li>
-              <li class="list-group-item">
-                <a id="twitter" target="_blank"><i class="fa fa-twitter"></i>  Twitter</a>
+              <li id="twitter" class="list-group-item">
+                <a id="twitter-link" target="_blank"><i class="fa fa-twitter"></i>  Twitter</a>
               </li>
-              <li class="list-group-item">
-                <a id="facebook" target="_blank"><i class="fa fa-facebook"></i>  Facebook</a>
+              <li id="facebook" class="list-group-item">
+                <a id="facebook-link" target="_blank"><i class="fa fa-facebook"></i>  Facebook</a>
               </li>
-              <li class="list-group-item">
-                <a id="resume" target="_blank"><i class="fa fa-file-pdf-o"></i> Resume</a>
+              <li id="resume" class="list-group-item">
+                <a id="resume-link" target="_blank"><i class="fa fa-file-pdf-o"></i> Resume</a>
               </li>
             </ul>
           </div>
@@ -59,10 +59,19 @@
           <!-- This Site -->
           <div class="card card-outline-success">
             <div class="card-block">
-              <p class="card-text">This site template is on <a id="projectsite" target="_blank" href="#">GitHub</a> for free. It is easily configurable via a config file. It can be extended as well to fit your portfolio. Simply add more cards that showcase or link previous projects, education, etc.</p> 
+              <p class="card-text">This site template is on <a id="projectsite" target="_blank" href="#">GitHub</a> for free. It is easily configurable via a config file. It can be extended as well to fit your portfolio needs. Simply add more cards that showcase previous projects, education, etc.</p> 
             </div>
           </div>
 
+          <!-- Extendable Cards -->
+          <div class="card card-outline-info">
+            <img class="card-img-top img-fluid mx-auto d-block" src="img/sample-project.jpg">
+            <div class="card-block">
+	      <h2 class="card-title text-xs-center text-muted">AI Botski</h2>
+	      <p class="card-text">My cornerstone project at XYU's machine learning program. This bot can beat a 10th grader at a game of chess after training it once. This is purely a sample project and does not exist to my knowledge. However, you can extend your portfolio by adding cards like this. Follow the link below to check out the Botski.</p>
+	      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="card-linkt" target="_blank">Check it out!</a>
+            </div>
+          </div>
 
         </div>
     </div>
@@ -74,6 +83,20 @@
     // config is defined in file config.js
 
     console.log("config values: " + JSON.stringify(config));
+
+    // if a config item is left empty or has a url fragment '#'
+    // then remove the element from the page
+    for (var key in config) {
+      if (config.hasOwnProperty(key)) {
+        if (config[key] === '') {
+          console.log(key + " is not configured and will be hidden.");
+          var element = document.getElementById(key);
+          element.parentNode.removeChild(element);
+        }
+      }
+    }
+
+    // set the various config values
     document.title = config.name;
     document.querySelector("body").style.backgroundColor = config.backgroundcolor;
     document.getElementById("profilepic").src = config.profilepic;
@@ -82,14 +105,17 @@
     document.getElementById("projectsite").href = config.projectsite;
     
     // social
-    document.getElementById("github").href = config.github;
-    document.getElementById("linkedin").href = config.linkedin;
-    document.getElementById("twitter").href = config.twitter;
-    document.getElementById("facebook").href = config.facebook;
-    document.getElementById("resume").href = config.resume;
+    document.getElementById("github-link").href = config.github;
+    document.getElementById("linkedin-link").href = config.linkedin;
+    document.getElementById("twitter-link").href = config.twitter;
+    document.getElementById("facebook-link").href = config.facebook;
+    document.getElementById("resume-link").href = config.resume;
   };
 
+  // call the init function
   init();
+
+
   </script>
   </body>
 
