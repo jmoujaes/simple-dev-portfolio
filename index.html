@@ -84,18 +84,6 @@
 
     console.log("config values: " + JSON.stringify(config));
 
-    // if a config item is left empty or has a url fragment '#'
-    // then remove the element from the page
-    for (var key in config) {
-      if (config.hasOwnProperty(key)) {
-        if (config[key] === '') {
-          console.log(key + " is not configured and will be hidden.");
-          var element = document.getElementById(key);
-          element.parentNode.removeChild(element);
-        }
-      }
-    }
-
     // set the various config values
     document.title = config.name;
     document.querySelector("body").style.backgroundColor = config.backgroundcolor;
@@ -110,6 +98,19 @@
     document.getElementById("twitter-link").href = config.twitter;
     document.getElementById("facebook-link").href = config.facebook;
     document.getElementById("resume-link").href = config.resume;
+
+    // if a config item is left empty or has a url fragment '#'
+    // then remove the element from the page
+    for (var key in config) {
+      if (config.hasOwnProperty(key)) {
+        if (config[key] === '') {
+          console.log(key + " is not configured and will be hidden.");
+          var element = document.getElementById(key);
+          element.parentNode.removeChild(element);
+        }
+      }
+    }
+
   };
 
   // call the init function
