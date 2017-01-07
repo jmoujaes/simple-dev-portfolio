@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+
+    <!-- bootstrap boilerplate -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- link stylesheets -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="js/config.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+        <div class="card-columns">
+
+          <!-- Write out 404 Not Found with cards -->
+          <div class="card card-outline-primary">
+            <div class="card-block text-xs-center">
+              <h1>404</h3>
+            </div>
+          </div>
+          <div class="card card-outline-danger">
+            <div class="card-block text-xs-center">
+              <h1>NOT</h3>
+            </div>
+          </div>
+          <div class="card card-outline-success">
+            <div class="card-block text-xs-center">
+              <h1>FOUND</h3>
+            </div>
+          </div>
+        </div>
+        <img id="404-img" class="card-img img-fluid rounded">
+    </div>
+
+    <script type="text/javascript">
+    console.log("config values: " + JSON.stringify(config));
+    document.getElementById("404-img").src = config.img404;
+    </script>
+
+  </body>
+</html>

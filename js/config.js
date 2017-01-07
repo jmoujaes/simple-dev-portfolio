@@ -9,4 +9,5 @@ var config = {
   'projectsite': 'https://github.com/rebbuz/simple-dev-portfolio',
   'resume': '#',
   'twitter': 'https://www.twitter.com/',
+  'img404': 'img/sad-pup.jpg'
 };
