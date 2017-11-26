@@ -2,6 +2,7 @@ body {
   padding: 25px;
 }
 
-#profilepic {
-  padding: 15px;
+.thumbnail {
+  width: 75%;
+  height: auto;
 }

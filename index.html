@@ -25,7 +25,7 @@
             <div class="card-block">
               <h2 class="card-title text-xs-center text-muted">About Me</h2>
             </div>
-            <img id="profilepic" class="card-img-top img-fluid rounded mx-auto d-block" src="#">
+            <a id="profilepic-full"><img id="profilepic-thumb" class="card-img-top img-fluid img-thumbnail thumbnail rounded mx-auto d-block" src="#"></a>
             <div class="card-block">
               <h3 id="profilename">My Name</h3>
               <p id="bio" class="card-text"></p>
@@ -59,7 +59,7 @@
           <!-- This Site -->
           <div class="card card-outline-success">
             <div class="card-block">
-              <p class="card-text">This site template is on <a id="projectsite" target="_blank" href="#">GitHub</a> for free. It is easily configurable via a config file. It can be extended as well to fit your portfolio needs. Simply add more cards that showcase previous projects, education, etc.</p> 
+              <p class="card-text">This site template is on <a id="projectsite" target="_blank" href="#">GitHub</a> for anyone to use. It is easily configurable via a config file. It can be extended as well to fit your portfolio needs. Simply add more cards that showcase previous projects, education, etc.</p> 
             </div>
           </div>
 
@@ -87,7 +87,8 @@
     // set the various config values
     document.title = config.name;
     document.querySelector("body").style.backgroundColor = config.backgroundcolor;
-    document.getElementById("profilepic").src = config.profilepic;
+    document.getElementById("profilepic-thumb").src = config.profilepic;
+    document.getElementById("profilepic-full").href = config.profilepic;
     document.getElementById("profilename").innerHTML = config.name;
     document.getElementById("bio").innerHTML = config.bio;
     document.getElementById("projectsite").href = config.projectsite;
