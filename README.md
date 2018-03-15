@@ -7,7 +7,7 @@ Take a look at [js/config.js](https://github.com/jmoujaes/simple-dev-portfolio/b
 
 Extend the site to fit your needs by adding more cards. Bootstrap documentation on cards: https://getbootstrap.com/docs/4.0/components/card/
 
-Pull requests, feedback, and filing issues are welcomed and appreciated!
+**Pull requests, feedback, and filing issues are welcomed and appreciated!**
 
 Sample profile image sourced from https://pixabay.com/en/profile-man-user-home-human-42914/
 
