@@ -24,12 +24,13 @@
       <div class="card p-3 border border-primary">
         <h2 class="card-title text-center text-muted">About Me</h2>
         <a id="profilepic-full"><img id="profilepic-thumb" class="img-fluid img-thumbnail w-75 rounded mx-auto d-block border border-dark" src="#"></a>
+
         <div class="card-body">
           <h3 id="profilename">My Name</h3>
           <p id="bio" class="card-text"></p>
-          <p id="email" class="card-text"></p>
+          <p id="email" class="card-text">&#128231;&nbsp;<a id="email-link"></a></p> <!-- &#128231; is the email character -->
         </div>
-      </div>
+      </div> <!-- end bio -->
 
       <!-- Social -->
       <div class="card p-3 border border-danger">
@@ -51,7 +52,7 @@
             <a id="resume-link" target="_blank"><i class="fa fa-file-pdf-o"></i> Resume</a>
           </li>
         </ul>
-      </div>
+      </div> <!-- end social -->
 
       <!-- This Site -->
       <div class="card p-3 border border-success">
@@ -86,7 +87,8 @@
     document.getElementById("profilepic-full").href = config.profilepic;
     document.getElementById("profilename").innerHTML = config.name;
     document.getElementById("bio").innerHTML = config.bio;
-    document.getElementById("email").innerHTML = "&#128231;&nbsp;" + config.email; // &#128231; is the email character
+    document.getElementById("email-link").href = "mailto:" + config.email;
+    document.getElementById("email-link").innerText = config.email;
     document.getElementById("projectsite").href = config.projectsite;
 
     // social
