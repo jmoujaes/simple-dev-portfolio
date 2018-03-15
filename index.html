@@ -9,7 +9,7 @@
 
     <!-- link stylesheets -->
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap4.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 
     <!-- pull in config values -->
@@ -18,63 +18,58 @@
 
   <body>
     <div class="container">
-        <div class="card-columns">
+      <div class="card-columns">
 
-          <!-- Bio -->
-          <div class="card card-outline-primary">
-            <div class="card-block">
-              <h2 class="card-title text-xs-center text-muted">About Me</h2>
-            </div>
-            <a id="profilepic-full"><img id="profilepic-thumb" class="card-img-top img-fluid img-thumbnail thumbnail rounded mx-auto d-block" src="#"></a>
-            <div class="card-block">
-              <h3 id="profilename">My Name</h3>
-              <p id="bio" class="card-text"></p>
-            </div>
-          </div>
-
-          <!-- Social -->
-          <div class="card card-outline-danger">
-            <div class="card-block">
-              <h2 class="card-title text-muted text-xs-center">Look Here</h2>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li id="github" class="list-group-item">
-                <a id="github-link" target="_blank"><i class="fa fa-github"></i>  Github</a>
-              </li>
-              <li id="linkedin" class="list-group-item">
-                <a id="linkedin-link" target="_blank"><i class="fa fa-linkedin"></i>  LinkedIn</a>
-              </li>
-              <li id="twitter" class="list-group-item">
-                <a id="twitter-link" target="_blank"><i class="fa fa-twitter"></i>  Twitter</a>
-              </li>
-              <li id="facebook" class="list-group-item">
-                <a id="facebook-link" target="_blank"><i class="fa fa-facebook"></i>  Facebook</a>
-              </li>
-              <li id="resume" class="list-group-item">
-                <a id="resume-link" target="_blank"><i class="fa fa-file-pdf-o"></i> Resume</a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- This Site -->
-          <div class="card card-outline-success">
-            <div class="card-block">
-              <p class="card-text">This site template is on <a id="projectsite" target="_blank" href="#">GitHub</a> for anyone to use. It is easily configurable via a config file. It can be extended as well to fit your portfolio needs. Simply add more cards that showcase previous projects, education, etc.</p> 
-            </div>
-          </div>
-
-          <!-- Extendable Cards -->
-          <div class="card card-outline-info">
-            <img class="card-img-top img-fluid mx-auto d-block" src="img/sample-project.jpg">
-            <div class="card-block">
-	      <h2 class="card-title text-xs-center text-muted">AI Botski</h2>
-	      <p class="card-text">My cornerstone project at XYU's machine learning program. This bot can beat a 10th grader at a game of chess after training it once. This is purely a sample project and does not exist to my knowledge. However, you can extend your portfolio by adding cards like this. Follow the link below to check out the Botski.</p>
-	      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="card-linkt" target="_blank">Check it out!</a>
-            </div>
-          </div>
-
+      <!-- Bio -->
+      <div class="card p-3 border border-primary">
+        <h2 class="card-title text-center text-muted">About Me</h2>
+        <a id="profilepic-full"><img id="profilepic-thumb" class="img-fluid img-thumbnail w-75 rounded mx-auto d-block border border-dark" src="#"></a>
+        <div class="card-body">
+          <h3 id="profilename">My Name</h3>
+          <p id="bio" class="card-text"></p>
+          <p id="email" class="card-text"></p>
         </div>
-    </div>
+      </div>
+
+      <!-- Social -->
+      <div class="card p-3 border border-danger">
+        <h2 class="card-title text-center text-muted">Look Here</h2>
+        <ul class="list-group list-group-flush">
+          <li id="github" class="list-group-item">
+            <a id="github-link" target="_blank"><i class="fa fa-github"></i>  Github</a>
+          </li>
+          <li id="linkedin" class="list-group-item">
+            <a id="linkedin-link" target="_blank"><i class="fa fa-linkedin"></i>  LinkedIn</a>
+          </li>
+          <li id="twitter" class="list-group-item">
+            <a id="twitter-link" target="_blank"><i class="fa fa-twitter"></i>  Twitter</a>
+          </li>
+          <li id="facebook" class="list-group-item">
+            <a id="facebook-link" target="_blank"><i class="fa fa-facebook"></i>  Facebook</a>
+          </li>
+          <li id="resume" class="list-group-item">
+            <a id="resume-link" target="_blank"><i class="fa fa-file-pdf-o"></i> Resume</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- This Site -->
+      <div class="card p-3 border border-success">
+        <p class="card-text">This site template is on <a id="projectsite" target="_blank" href="#">GitHub</a> for anyone to use. It is easily configurable via a config file. It can be extended as well to fit your portfolio needs. Simply add more cards that showcase previous projects, education, etc.</p> 
+      </div>
+
+      <!-- Extendable Cards -->
+      <div class="card border border-warning">
+        <img class="card-img-top img-fluid mx-auto d-block" src="img/sample-project.jpg">
+        <div class="card-body">
+          <h2 class="card-title text-center text-muted">AI Botski</h2>
+          <p class="card-text">My cornerstone project at XYU's machine learning program. This bot can beat a 10th grader at a game of chess after training it once. This is purely a sample project and does not exist to my knowledge. However, you can extend your portfolio by adding cards like this. Follow the link below to check out the Botski.</p>
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="card-linkt" target="_blank">Check it out!</a>
+        </div>
+      </div>
+
+      </div> <!-- end card-columns -->
+    </div> <!-- end container -->
 
 
   <script type="text/javascript">
@@ -91,8 +86,9 @@
     document.getElementById("profilepic-full").href = config.profilepic;
     document.getElementById("profilename").innerHTML = config.name;
     document.getElementById("bio").innerHTML = config.bio;
+    document.getElementById("email").innerHTML = "&#128231;&nbsp;" + config.email; // &#128231; is the email character
     document.getElementById("projectsite").href = config.projectsite;
-    
+
     // social
     document.getElementById("github-link").href = config.github;
     document.getElementById("linkedin-link").href = config.linkedin;
