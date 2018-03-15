@@ -6,7 +6,7 @@ var config = {
   'github': 'https://www.github.com/',
   'linkedin': 'https://www.linkedin.com/',
   'profilepic': 'img/sample-profile.png',
-  'projectsite': 'https://github.com/rebbuz/simple-dev-portfolio',
+  'projectsite': 'https://github.com/jmoujaes/simple-dev-portfolio',
   'resume': '#',
   'twitter': 'https://www.twitter.com/',
   'img404': 'img/sad-pup.jpg'
